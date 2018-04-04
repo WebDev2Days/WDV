@@ -1,0 +1,83 @@
+extends ../../../templates/sidebar.pug
+
+block main
+  block append stylesheets
+    style.
+      #sidebar > .row > .col:first-of-type > a:nth-of-type(2) > h5{
+        border-left: 4px solid #12BBAD;
+      }
+
+  h4.lead.pl-1.pb-2
+    b My Orders
+  .tab
+    table.table.table-striped
+      thead
+        tr
+          th(scope='col') Order
+          th(scope='col') Status
+          th(scope='col') Date
+          th(scope='col') Price
+          th(scope='col', style='width: 70px;') Actions
+      tbody
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0003092
+          td Ordered
+          td Feb 14, 2018
+          td P 230
+          td
+            a.button.btn.btn-sm.btn-danger.text-white(data-toggle='modal', data-target='#CancelOrder')  Cancel 
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0003014
+          td Delivered
+          td Feb 9, 2018
+          td P 150
+          td
+            a.button.btn.btn-sm.btn-danger.text-white(data-toggle='modal', data-target='#CancelOrder')  Cancel 
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0002437
+          td Delivered
+          td Feb 4, 2018
+          td P 420
+          td
+            a.button.btn.btn-sm.btn-danger.text-white(data-toggle='modal', data-target='#CancelOrder')  Cancel 
+        #CancelOrder.modal.fade(tabindex='-1', role='dialog', aria-labelledby='CancelOrderTitle', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-header
+                h5#CancelOrderTitle.modal-title
+                  b  Cancel Order
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+              .modal-body
+                p Continue to Cancel Order?
+              .modal-footer
+                button.btn.btn-danger(type='submit') Yes
+                button.btn.btn-secondary(type='button', ,='', data-dismiss='modal') No
+  .row
+    .col  
+    .col.pt-3
+      ul.pagination
+        li.page-item
+          a.page-link(href='#', aria-label='Previous')
+            span(aria-hidden='true') «
+            span.sr-only Previous
+        li.page-item
+          a.page-link(href='#') 1
+        li.page-item
+          a.page-link(href='#') 2
+        li.page-item
+          a.page-link(href='#') 3
+        li.page-item
+          a.page-link(href='#') 4
+        li.page-item
+          a.page-link(href='#') 5
+        li.page-item
+          a.page-link(href='#') 6
+        li.page-item
+          a.page-link(href='#', aria-label='Next')
+            span(aria-hidden='true') »
+            span.sr-only Next
+    .col  

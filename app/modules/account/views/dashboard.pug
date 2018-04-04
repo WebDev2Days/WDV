@@ -1,0 +1,81 @@
+extends ../../../templates/sidebar.pug
+
+block main
+  block append stylesheets
+    style.
+      #sidebar > .row > .col:first-of-type > a:nth-of-type(1) > h5{
+        border-left: 4px solid #12BBAD;
+      }
+
+  h4.lead.pl-1.pb-2
+    b Account Dashboard
+  .row
+    .col-md-6.mb-3
+      .card(style='padding-bottom: 8.5px;')
+        .card-header  Personal information
+        .card-body
+          h4 John Doe
+          h6.text-muted
+            | johndoe@mail.com
+            br
+            br
+          a.btn.btn-custom-primary(data-toggle='modal', data-target='#EditInfo')
+            i.fa.fa-fw.fa-wrench
+            |  Edit
+          #EditInfo.modal.fade(tabindex='-1', role='dialog', aria-labelledby='EditInfoTitle', aria-hidden='true')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h5#EditInfoTitle.modal-title
+                    b  Edit Personal Information
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                .modal-body
+                  .row
+                    .col
+                      label(for='dsa')
+                        b First Name
+                      input#fname.form-control.mb-3(type='text', name='fname', value='John', required='')
+                    .col
+                      label(for='dsa')
+                        b Middle Name
+                      input#mname.form-control.mb-3(type='text', name='mname')
+                    .col
+                      label(for='dsa')
+                        b Last Name
+                      input#lname.form-control.mb-3(type='text', name='lname', value='Doe', required='')
+                  label(for='dsa')
+                    b Email
+                  input#email.form-control.mb-3(type='text', name='email', value='johndoe@mail.com', required='')
+                  label(for='dsa')
+                    b Default Shipping Address
+                  input#dsa.form-control.mb-3(type='text', name='dsa')
+                  label(for='dba')
+                    b Default Billing Address
+                  input#dba.form-control.mb-3(type='text', name='dba')
+                .modal-footer
+                  button.btn.btn-custom-primary(type='submit') Submit
+                  button.btn.btn-secondary(type='button', ,='', data-dismiss='modal') Close
+    .col-md-6.mb-3
+      .card
+        .card-header  Default Billing Address 
+        .card-body
+          p
+            | No default billing address available.
+            br
+            br
+            br
+            br
+            br
+    .col-md-6.mb-3
+      .card
+        .card-header  Default Shipping Address 
+        .card-body
+          h6.text-muted
+            | No default shipping address available
+            br
+            br
+            br
+            br
+            br
+            br

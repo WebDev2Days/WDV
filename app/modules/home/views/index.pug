@@ -1,0 +1,157 @@
+extends ../../../templates/navbar-footer.pug
+
+block main
+  .mt-3.pt-5.pb-4.text-center.bg-secondary.text-white.banner
+    .container
+      .row
+        .col-md-12.pt-3.pb-1
+          h1.mb-3.banner-header Welcome to Ultra Super Green
+      .row
+        .col-12
+          #carouselArchitecture.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselArchitecture', data-slide-to='0')
+                i
+              li(data-target='#carouselArchitecture', data-slide-to='1')
+                i
+              li(data-target='#carouselArchitecture', data-slide-to='2')
+                i
+            #banner-carousel.carousel-inner(role='listbox')
+              .carousel-item.active
+                img.d-block.img-fluid.banner-img(src='/assets/images/static/organic1.jpg', data-holder-rendered='true')
+              .carousel-item
+                img.d-block.img-fluid.banner-img(src='/assets/images/static/organic2.jpg', data-holder-rendered='true')
+              .carousel-item
+                img.d-block.img-fluid.banner-img(src='/assets/images/static/organic3.jpg', data-holder-rendered='true')
+  .mt-4
+    .container
+      div
+        h3.lead.fl-l.light-bold
+          b Most Popular Products
+        h3.lead.fl-r
+          a(href='store.html') Go To Store >
+      br
+      br
+      .row
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img1.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Keto Loaf & Rolls
+                p
+                  small Coco Keto
+            .card-body.bottom-card-button
+              h4.card-price ₱ 115
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img2.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Shahani's Gatas Kalabaw
+                p
+                  small Shahani
+            .card-body.bottom-card-button
+              h4.card-price ₱ 150
+              button.btn.btn-danger.btn-block.clear-opacity(disabled='')
+                | Out of Stock
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img3.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Raw Cordyceps
+                p
+                  small The Healthy Grocery
+            .card-body.bottom-card-button
+              h4.card-price ₱ 105
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img4.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Kala Milk Soap
+                p
+                  small Kala Milk
+            .card-body.bottom-card-button
+              h4.card-price ₱ 60
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+    br
+  .mb-5
+    .container
+      div
+        h3.lead.fl-l.light-bold
+          b New Products
+        h3.lead.fl-r
+          a(href='/store') Go To Store >
+      br
+      br
+      .row
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img5.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Dugos Wild Forest Honey
+                p
+                  small Usares Foods
+            .card-body.bottom-card-button
+              h4.card-price ₱ 350
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img6.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Dairy-Free Choco Milk
+                p
+                  small SuperScoops
+            .card-body.bottom-card-button
+              h4.card-price ₱ 100
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img7.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Super Tempeh Plant Powdered Protein
+                p
+                  small The SuperFood Grocer
+            .card-body.bottom-card-button
+              h4.card-price ₱ 120
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart
+        .col-sm-6.col-lg-3.mb-4
+          .card
+            a(href='/item')
+              img.card-img-top.product-img(src='/assets/images/static/img8.jpg', alt='Card image cap')
+            ul.list-group.list-group-flush
+              li.list-group-item.bold.product-card-name
+                | Organic Coco Seasoning
+                p
+                  small Coco Natura
+            .card-body.bottom-card-button
+              h4.card-price ₱ 70
+              a.btn.btn-custom-primary.btn-block(href='#')
+                i.fa.fa-fw.fa-cart-plus
+                |  Add to Cart

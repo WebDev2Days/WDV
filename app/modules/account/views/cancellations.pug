@@ -1,0 +1,74 @@
+extends ../../../templates/sidebar.pug
+
+block main
+  block append stylesheets
+    style.
+      #sidebar > .row > .col:first-of-type > a:nth-of-type(4) > h5{
+        border-left: 4px solid #12BBAD;
+      }
+
+  h4.lead.pl-1.pb-2
+    b My Cancellations
+  .tab
+    table.table.table-striped
+      thead
+        tr
+          th(scope='col') Order
+          th(scope='col') Date Cancelled
+          th(scope='col') Price
+      tbody
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0003088
+          td Feb 11, 2018
+          td P 180
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0003001
+          td Feb 9, 2018
+          td P 350
+        tr
+          th(scope='row')
+            a(href='/summary/order') Order#0002432
+          td Jan 30, 2018
+          td P 200
+        #reOrder.modal.fade(tabindex='-1', role='dialog', aria-labelledby='reOrderTitle', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-header
+                h5#reOrderTitle.modal-title
+                  b  Re-Order
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+              .modal-body
+                p Continue to Re-Order Items?
+              .modal-footer
+                button.btn.btn-info(type='submit') Yes
+                button.btn.btn-secondary(type='button', ,='', data-dismiss='modal') No
+  .row
+    .col  
+    .col.pt-3
+      ul.pagination
+        li.page-item
+          a.page-link(href='#', aria-label='Previous')
+            span(aria-hidden='true') «
+            span.sr-only Previous
+        li.page-item
+          a.page-link(href='#') 1
+        li.page-item
+          a.page-link(href='#') 2
+        li.page-item
+          a.page-link(href='#') 3
+        li.page-item
+          a.page-link(href='#') 4
+        li.page-item
+          a.page-link(href='#') 5
+        li.page-item
+          a.page-link(href='#') 6
+        li.page-item
+          a.page-link(href='#', aria-label='Next')
+            span(aria-hidden='true') »
+            span.sr-only Next
+    .col  
+
+  

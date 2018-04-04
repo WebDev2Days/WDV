@@ -1,0 +1,41 @@
+extends navbar.pug
+
+block side
+  #sidebar.container
+    .row
+      .col
+        h5
+          b John Doe
+        a(href='/account/dashboard')
+          h5
+            b Dashboard
+        a(href='/account/orders')
+          h5
+            b Orders
+        a(href='/account/payment')
+          h5
+            b Payment
+        a(href='/account/cancellations')
+          h5
+            b Cancellations
+      .col
+        #topbar.row
+          .col
+            i.fa.d-inline.fa-lg.fa-user.mr-2
+            span.mr-2 John Doe
+            a(href='/account/dashboard')
+              i.fa.d-inline.fa-lg.fa-columns.mr-2
+              span.top-desc.mr-2 Dashboard
+            a(href='/account/orders')
+              i.fa.d-inline.fa-lg.fa-shopping-cart.mr-2
+              span.top-desc.mr-2 Orders
+            a(href='/account/payment')
+              i.fa.d-inline.fa-lg.fa-fw.fa-money.mr-2
+              span.top-desc.mr-2 Payment
+            a(href='/account/cancellations')
+              i.fa.d-inline.fa-lg.fa-ban.mr-2
+              span.top-desc.mr-2 Cancellations
+        #main-content
+          block main
+    
+    
