@@ -3,9 +3,6 @@ extends ../../../templates/master.pug
 block content
   .container.container-login(style='max-width:1540px')
       .row.mh-100vh
-          #bg-block.col-lg-6.d-flex.align-items-end(style='background-image:url("/assets/images/static/img2.png");background-size:cover;background-position:center center;')
-            p.ml-auto.small.text-dark.mb-2
-                br
           #login-block.col-10.col-sm-8.col-md-6.col-lg-6.offset-1.offset-sm-2.offset-md-3.offset-lg-0.align-self-center.d-lg-flex.align-items-lg-center.align-self-lg-stretch.bg-white.p-5.rounded.rounded-lg-0.my-5.my-lg-0(style="float:right;")
             .m-auto.w-lg-75.w-xl-55
                 h2.mb-3.text-center(style='color:#199973;')
@@ -65,4 +62,7 @@ block content
                       b
                         | Already have an account? 
                         a(href='/login') Sign-in Here
+          #bg-block.col-lg-6.d-flex.align-items-end(style='background-image:url("/assets/images/static/img3.png");background-size:cover;background-position:center center;')
+            p.ml-auto.small.text-dark.mb-2
+                br
   block message
