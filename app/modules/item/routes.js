@@ -6,7 +6,7 @@ var flog = require('../welcome/loggedin');
 function fprod(req,res,next){
   /*Test Function, Match(params);
   *(tblchat)*/
-  db.query("SELECT * FROM tblproduct ORDER BY intProdID LIMIT 4", (err, results, fields) => {
+  db.query("SELECT * FROM tblproduct INNER JOIN tblcategories ON intProdCatID= intCatID WHERE intProdID= ?", [req.params.itemid], (err, results, fields) => {
     if (err) console.log(err);
     req.fprod= results;
     return next();
@@ -14,9 +14,9 @@ function fprod(req,res,next){
 }
 
 function render(req,res){
-  res.render('item/views/index',{thisusertab: req.user});
+  res.render('item/views/index',{thisusertab: req.user, products: req.fprod});
 }
 
-router.get('/', flog, render);
+router.get('/:itemid', flog, fprod, render);
 
 exports.item = router;

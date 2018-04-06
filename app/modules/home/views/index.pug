@@ -64,7 +64,7 @@ block main
         each prod in products
           .col-sm-6.col-lg-3.mb-4
             .card
-              a(href='/item')
+              a(href='/item/'+prod.intProdID)
                 img.card-img-top.product-img(src='/assets/images/static/'+prod.strProdImg alt='Card image cap')
               ul.list-group.list-group-flush
                 li.list-group-item.bold.product-card-name
