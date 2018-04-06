@@ -1,0 +1,81 @@
+extends ../../../templates/sidebar-product.pug
+
+block main
+  .row.px-3
+    .col
+      h4.lead.pl-1.pb-2(style='padding-top: 7px;')
+        b All Products
+    |     
+    .col-4.mb-3(style='text-align: right')
+      select#sort.form-control(name='sort')
+        option(value='') Sort by Popularity
+        |         
+        option(value='') Sort by Price
+        |         
+        option(value='') Sort by Newest
+  |   
+  div
+    .container
+      .row
+        each prod in products
+          .col-sm-6.col-lg-4.mb-4
+            .card
+              a(href='/item/'+intProdID)
+                img.card-img-top.product-img(src='/assets/images/static/'+prod.strProdImg, alt='Card image cap')
+              |             
+              ul.list-group.list-group-flush
+                li.list-group-item.bold.product-card-name
+                  | #{prod.strProdName}
+                  p
+                    small #{prod.intProdStock} Left
+              |             
+              .card-body.bottom-card-button
+                h4.card-price &#x20B1; #{prod.fltProdPrice}
+                |               
+                each thisuser in thisusertab
+                  a.btn.btn-custom-primary.btn-block(href='#')
+                    i.fa.fa-fw.fa-cart-plus
+                    | &nbsp;Add to Cart
+    |     
+    br
+  |   
+  div
+    .container
+      .row
+  |   
+  .row
+    .col  
+    |     
+    .col.pt-3
+      ul.pagination
+        li.page-item
+          a.page-link(href='#', aria-label='Previous')
+            span(aria-hidden='true') &laquo;
+            |  
+            span.sr-only Previous
+        |         
+        li.page-item
+          a.page-link(href='#') 1
+        |         
+        li.page-item
+          a.page-link(href='#') 2
+        |         
+        li.page-item
+          a.page-link(href='#') 3
+        |         
+        li.page-item
+          a.page-link(href='#') 4
+        |         
+        li.page-item
+          a.page-link(href='#') 5
+        |         
+        li.page-item
+          a.page-link(href='#') 6
+        |         
+        li.page-item
+          a.page-link(href='#', aria-label='Next')
+            span(aria-hidden='true') &raquo;
+            |  
+            span.sr-only Next
+    |     
+    .col  

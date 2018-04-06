@@ -275,6 +275,14 @@ a:hover {
   text-align: right !important;
 }
 
+.fake-link {
+  color: #12BBAD !important;
+}
+.fake-link:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #12BBAD !important;
+}
+
 /*Custom*/
 body {
   background: #F7F7F7;
@@ -397,8 +405,8 @@ a:hover > .top-desc {
 }
 .absolute-payment {
   position: fixed;
-  left: 1;
-  top: 1;
+  left: auto;
+  top: auto;
 }
 .payment-content {
   background: #FFFFFF;

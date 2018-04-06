@@ -116,16 +116,24 @@ block content
             a#navbarDropdownMenuLink.nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
               i.fa.fa-fw.fa-cog
             .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-              a.dropdown-item(href='/account/dashboard')
-                i.fa.d-inline.fa-lg.fa-user
-                |   Account
+              each thisuser in thisusertab
+                a.dropdown-item(href='/account/dashboard')
+                  i.fa.d-inline.fa-lg.fa-user
+                  |   Account
               a.dropdown-item(href='/home/faq')
                 i.fa.d-inline.fa-lg.fa-question-circle
                 |   FAQs
               hr#hzline
-              a.dropdown-item(href='/login')
-                i.fa.d-inline.fa-lg.fa-sign-out
-                |   Logout
+              - user = 0
+              each thisuser in thisusertab
+                - user = 1
+                a.dropdown-item(href='/login')
+                  i.fa.d-inline.fa-lg.fa-sign-out
+                  |   Logout
+              if user == 0
+                a.dropdown-item(href='/login')
+                  i.fa.d-inline.fa-lg.fa-sign-out
+                  |   Login
   
   #CartModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='CartModalTitle', aria-hidden='true')
     .modal-dialog.modal-lg(role='document')
@@ -205,8 +213,9 @@ block content
               b Sub-Total: 
               | Php 800
         .modal-footer
-          a(href='checkout.html')
+          a(href='/summary/checkout')
             button.btn.btn-custom-primary Proceed to Checkout
-          button.btn.btn-secondary(type='button', ,='', data-dismiss='modal') Close
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Close
 
   block side
+  block nav-main

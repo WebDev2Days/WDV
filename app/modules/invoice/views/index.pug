@@ -1,0 +1,178 @@
+extends ../../../templates/master.pug
+
+block content
+  block append stylesheets
+    link(rel='stylesheet', href='/assets/custom/voucher.css', type='text/css')
+    style.
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #section-to-print, #section-to-print * {
+          visibility: visible;
+        }
+        #section-to-print {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+      
+  #page-wrap
+    #section-to-print
+      br
+      |   
+      div(align='center')
+        h1.title Ultra Super Green Trading Corporation
+      |   
+      br
+      |   
+      div
+        table#inv
+          tr
+            td.meta-head Invoice #
+            |         
+            td 000946588
+          |       
+          tr
+            td.meta-head Payment Due
+            |         
+            td April 10, 2018
+        |     
+        #date
+          p April 4, 2018
+      |   
+      #lower
+        #cashier
+          b Cashier/Representative:
+          br
+          |       Address
+          br
+          |       Phone : 799-0725
+          br
+          |       Mobile : 09236835707
+          br
+          |       E-mail : superscoops@mail.com
+        |     
+        #customer
+          b Customer Details:
+          br
+          |       Account No. : 0005722
+          br
+          |       Name : John Doe
+          br
+          |       E-mail : johndoe@mail.com
+          br
+          |       Contact : 09237433499
+        |     
+        #address
+          b Address :
+          br
+          |       Street : 0005722
+          br
+          |       Barangay : John Doe
+          br
+          |       City : johndoe@mail.com
+          br
+          |       Zip Code:
+        |     
+        table#items
+          tr
+            th.align-left Product
+            |         
+            th.align-left(style='width: 80px') Price
+            |         
+            th.align-left(style='width: 50px') Quantity
+            |         
+            th.align-left(style='width: 80px') Total Price
+          |       
+          tr.item-row
+            td.description
+              text Shahani&apos;s Gatas Kalabaw
+            |         
+            td
+              text Php 230
+            |         
+            td
+              text 1
+            |         
+            td
+              text Php 230
+          |       
+          tr.item-row
+            td
+              text Keto Loaf &amp; Rolls
+            |         
+            td
+              text Php 75
+            |         
+            td
+              text 2
+            |         
+            td
+              text Php 150
+          |       
+          tr.item-row
+            td
+              text Raw Cordyceps
+            |         
+            td
+              text Php 105
+            |         
+            td
+              text 4
+            |         
+            td
+              text Php 420
+              |           
+              br
+              br
+        |     
+        .row.mt-3.mr-0
+          .col
+          |       
+          .col-4.py-2(style='border: 1px solid black;')
+            .row
+              .col-6
+                p.mb-1
+                  b Sub-total:
+                |             
+                p.mb-1
+                  b VAT:
+                |             
+                p.mb-1
+                  b Shipping fee:
+              |           
+              .col-6(style='padding-left: 20px;')
+                p.mb-1 Php 800.00
+                |             
+                p.mb-1 Php &nbsp&nbsp66.66
+                |             
+                p.mb-1 Php &nbsp&nbsp40.00
+                |             
+                p
+            |         
+            .row
+              .col-6
+                p.text-danger
+                  b Total:
+              |           
+              .col-6(style='padding-left: 20px;')
+                p.mb-1 Php 906.66
+                |             
+                p
+        |     
+        #terms
+          h5
+          |       
+          text Ultra Super Green
+        |     
+        p &nbsp
+        |     
+        h1.subtitle ----------------------------------------------
+        |     
+        p
+          sup
+          | Cut Here
+        |     
+        br

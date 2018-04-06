@@ -14,25 +14,9 @@ function fprod(req,res,next){
 }
 
 function render(req,res){
-  switch (req.valid) {
-    case 0:
-    case 1:
-    case 2:
-      res.render('home/views/index',{thisusertab: req.user, products: req.fprod});
-      break;
-  }
-}
-function faqRender(req,res){
-  switch (req.valid) {
-    case 0:
-    case 1:
-    case 2:
-      res.render('home/views/faq',{thisusertab: req.user});
-      break;
-  }
+  res.render('item/views/index',{thisusertab: req.user});
 }
 
-router.get('/', flog, fprod, render);
-router.get('/faq', flog, faqRender);
+router.get('/', flog, render);
 
-exports.home = router;
+exports.item = router;

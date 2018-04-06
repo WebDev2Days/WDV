@@ -1,0 +1,134 @@
+extends ../../../templates/navbar.pug
+
+block nav-main
+  #content.container
+    .row
+      .col
+        .row
+          #inner-content.col-md-7
+            div(style='text-align:center;')
+              h4.lead.pl-1.pb-2
+                b Order Summary
+            |           
+            .card.mb-2
+              .card-body
+                .row
+                  .col-lg-4.col-6.mb-2
+                    img.img-fluid.d-block.tab-img(src='/assets/images/static/img1.jpg')
+                  |                 
+                  .col-lg-8.col-6.mb-2.order-summary-desc
+                    h4
+                      b Keto Loaf
+                    |                   
+                    br
+                    |                   
+                    small Price: &#x20B1; 115
+                    |                   
+                    br
+                    |                   
+                    small Quantity: 1
+                    |                   
+                    br
+                    |                   
+                    h4.mb-1.mt-2
+                      b Total:
+                      |  &#x20B1; 115
+            |           
+            .card.mb-2
+              .card-body
+                .row
+                  .col-lg-4.col-6.mb-2
+                    img.img-fluid.d-block.tab-img(src='/assets/images/static/img2.jpg')
+                  |                 
+                  .col-lg-8.col-6.mb-2.order-summary-desc
+                    h4
+                      b Shahani&apos;s Gatas Kalabaw
+                    |                   
+                    br
+                    |                   
+                    small Price: &#x20B1; 150
+                    |                   
+                    br
+                    |                   
+                    small Quantity: 2
+                    |                   
+                    br
+                    |                   
+                    h4.mb-1.mt-2
+                      b Total:
+                      |  &#x20B1; 300
+            |           
+            .card.mb-2
+              .card-body
+                .row
+                  .col-lg-4.col-6.mb-2
+                    img.img-fluid.d-block.tab-img(src='/assets/images/static/img3.jpg')
+                  |                 
+                  .col-lg-8.col-6.mb-7.order-summary-desc
+                    h4
+                      b Raw Cordyceps
+                    |                   
+                    br
+                    |                   
+                    small Price: &#x20B1; 105
+                    |                   
+                    br
+                    |                   
+                    small Quantity: 4
+                    |                   
+                    br
+                    |                   
+                    h4.mb-1.mt-2
+                      b Total:
+                      |  &#x20B1; 420
+          |         
+          .col-md-4.mx-4(style='position:relative;')
+            .absolute-payment
+              .payment-content
+                div(style='text-align:center; background: #12BBAD; border-radius: 5px;')
+                  h4.lead.pl-1.pb-2.text-white.pt-1
+                    b Payment Method
+                |               
+                .col-12
+                  a.hover-link(href='')
+                    h1
+                      i.fa.fa-fw.fa-money
+                      span(style='font-size: 30px;') &nbsp;Cash On Hand
+                  |                 
+                  hr
+                |               
+                .col-12
+                  a.hover-link(href='')
+                    h1
+                      i.fa.fa-fw.fa-credit-card
+                      span(style='font-size: 30px;') &nbsp;Bank Deposit
+              |             
+              .payment-content
+                .row
+                  .col-6
+                    p
+                      b.mr-2 Sub-total:
+                    |                   
+                    p.mb-0
+                      b.mr-2 VAT:
+                  |                 
+                  .col-6
+                    p
+                      span.mx-4(style='padding-left: 12px;') &#x20B1;
+                      |  835.00
+                    |                   
+                    p.mb-0
+                      span.mx-4(style='padding-left: 12px;') &#x20B1;
+                      |  &nbsp&nbsp69.58
+                |               
+                hr
+                |               
+                .row
+                  .col
+                    p.mb-0
+                      b TOTAL:
+                  |                 
+                  .col
+                    p.mb-0
+                      span.mx-4(style='padding-left: 12px;') &#x20B1;
+                      |  904.58

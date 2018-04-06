@@ -1,0 +1,70 @@
+extends navbar.pug
+
+block side
+  #sidebar.container
+    .row
+      .col
+        h5
+          b Product Categories
+        |       
+        a(href='/store')
+          h5
+            b All Products
+        |       
+        a(href='/store')
+          h5
+            b Food &amp; Beverages
+        |       
+        a(href='/store')
+          h5
+            b Supplements
+        |       
+        a(href='/store')
+          h5
+            b Hygiene
+        |       
+        a(href='/store')
+          h5
+            b Cosmetics
+        |       
+        a(href='/store')
+          h5
+            b Stationary
+      |     
+      .col
+        #topbar.row
+          .col
+            i.fa.d-inline.fa-lg.fa-product-hunt.mr-2
+            span.mr-2 Categories
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-align-left.mr-2
+              |             
+              span.top-desc.mr-2 All
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-cutlery.mr-2
+              |             
+              span.top-desc.mr-2 Food &amp; Beverage
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-medkit.mr-2
+              |             
+              span.top-desc.mr-2 Supplements
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-fw.fa-shower.mr-2
+              |             
+              span.top-desc.mr-2 Hygiene
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-eye.mr-2
+              |             
+              span.top-desc.mr-2 Cosmetics
+            |           
+            a(href='/store')
+              i.fa.d-inline.fa-lg.fa-paperclip.mr-2
+              |             
+              span.top-desc.mr-2 Stationary
+        #main-content
+          block main

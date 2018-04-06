@@ -1,0 +1,124 @@
+extends ../../../templates/navbar-footer.pug
+
+block main
+  #content.container
+    .row
+      .col
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb.breadcrumb-item
+            li.breadcrumb-item
+              a(href='store.html') Supplements
+            |           
+            li.breadcrumb-item.active(aria-current='page')
+              | Raw Cordyceps
+        |       
+        #inner-content
+          .mb-4.pl-1
+            h4.lead.mb-0
+              b Raw Cordyceps
+            |         
+            small.text-muted The Healthy Grocery
+            |       
+            hr
+          |         
+          .row.mx-1
+            .col-sm-6.mb-3
+              img(src='/assets/images/static/img3.jpg', alt='USG', height='350px', width='100%')
+            |           
+            .col-sm-6.mb-3
+              .row.item-desc(style='height: 200px; overflow-y: auto;')
+                .col
+                  h7
+                    | Cordyceps is actually a type or fungi that&rsquo;s real name is Cordyceps Sinensis Its name has came from Greek terminology actually translating to &ldquo;club head&rdquo; because the way cordyceps looks when it grows. There are over 400 different species of Cordyceps, but this particular species is found mostly in parts of Asia including Nepal, China, Korea, Thailand, Vietnam, Bhutan and Japan it is said to be found in rainforest type area&rsquo;s with very hot humid environment&rsquo;s.
+              |             
+              .row.pt-3(style='height: 150px;')
+                .col
+                  h4.mb-1 &#x20B1; 150
+                  |                 
+                  small
+                    | Before 
+                    span.line-through &#x20B1; 160
+                  |                 
+                  br
+                  |                 
+                  small.text-muted Only 20 items left
+                  |                 
+                  br
+                  |                 
+                  each thisuser in thisusertab
+                    a.btn.btn-custom-primary.btn-lg.mt-1(href='#')
+                      i.fa.fa-fw.fa-cart-plus
+                      | &nbsp;Add to Cart
+          |         
+          .row.px-4.mt-2
+            .col
+              h4 Reviews
+          |         
+          .row.mx-1
+            .col-sm-6.mb-3
+              .card.mb-2
+                .card-header
+                  b  John Doe 
+                |               
+                .card-body
+                  h4 Good Buy
+                  |                 
+                  h6.text-muted
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star-o
+                  |                 
+                  p It&apos;s a good product, might buy again soon.
+            |           
+            .col-sm-6.mb-3
+              .card.mb-2
+                .card-header
+                  b  Jocelyn Flores 
+                |               
+                .card-body
+                  h4 Excellent Product!
+                  |                 
+                  h6.text-muted
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                  |                 
+                  p Definitely going to buy again!
+            |           
+            .col-sm-6.mb-3
+              .card.mb-2
+                .card-header
+                  b  Ralf Milan 
+                |               
+                .card-body
+                  h4 Awesome Product
+                  |                 
+                  h6.text-muted
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star-o
+                  |                 
+                  p My new place for buying this product.
+            |           
+            .col-sm-6.mb-3
+              .card.mb-2
+                .card-header
+                  b  John Wick 
+                |               
+                .card-body
+                  h4 Amazing!
+                  |                 
+                  h6.text-muted
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                    i.fa.fa-fw.fa-star
+                  |                 
+                  p This product proves to be very effective, i have witnessed the results.
